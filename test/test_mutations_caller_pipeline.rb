@@ -15,7 +15,8 @@ class MutationsCallerPipelineTest < Test::Unit::TestCase
   end
 
   def test_gatk_caller
-
+    k = GatkCaller.call("haas", "~/Documents/GATK/dist/GenomeAnalysisTK.jar", "jsjs", "baba", "saa")
+    assert(!k)
   end
 
   def test_create_location_file
