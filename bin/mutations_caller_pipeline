@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'mutations_caller_pipeline'
+puts MutationsCallerPipeline.hi

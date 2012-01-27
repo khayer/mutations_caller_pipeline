@@ -17,4 +17,8 @@ class MutationsCallerPipelineTest < Test::Unit::TestCase
   def test_gatk_caller
 
   end
+
+  def test_create_location_file
+
+  end
 end

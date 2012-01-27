@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "mutations_caller_pipeline"
-  s.version     = "0.0.2"
+  s.version     = "0.0.3"
   s.date        = "2012-01-20"
   s.authors     = ["Kaharina Hayer"]
   s.email       = ["katharinaehayer@gmail.com"]
@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "mutations_caller_pipeline"
 
-  s.files         = ["lib/mutations_caller_pipeline.rb"]
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  s.files         = `git ls-files -- {lib,bin}/*`.split("\n")
+  #s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   << 'mutations_caller_pipeline'
+  #s.require_paths =  ["lib"]
 end
