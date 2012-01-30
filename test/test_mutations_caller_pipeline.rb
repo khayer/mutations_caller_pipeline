@@ -4,10 +4,13 @@ require 'mutations_caller_pipeline'
 class MutationsCallerPipelineTest < Test::Unit::TestCase
   def test_hi
     assert_equal  "Hello World!", MutationsCallerPipeline.hi
+    File.delete("haas")
   end
 
   def test_bwa_caller
-
+    k = BwaCaller.call_paired_end("r1", "r2", "out_file", "index", "haas", "bwa", "samtools")
+    assert(k)
+    assert(File.exist?("haas"))
   end
 
   def test_samtools_indexing
