@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: GatkCaller
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (G)</a> &raquo; 
+    
+    
+    <span class="title">GatkCaller</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: GatkCaller
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">GatkCaller</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/mutations_caller_pipeline/gatk_caller.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#call-class_method" title="call (class method)">+ (Object) <strong>call</strong>(log_dir, gatk, index_fa, read_bam, read_vcf) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>INDEX is normal genom.fa.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prepare_realigne-class_method" title="prepare_realigne (class method)">+ (Object) <strong>prepare_realigne</strong>(log_dir, gatk, read_bam, index_fa, target_intervals) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#realigne-class_method" title="realigne (class method)">+ (Object) <strong>realigne</strong>(log_dir, gatk, read_bam, index_fa, target_intervals, realigned_bam) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recalibrate_bam-class_method" title="recalibrate_bam (class method)">+ (Object) <strong>recalibrate_bam</strong>(log_dir, gatk, index_fa, index_vcf, read_bam, recal_file) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#table_calibration-class_method" title="table_calibration (class method)">+ (Object) <strong>table_calibration</strong>(log_dir, gatk, index_fa, read_bam, recal_bam, recal_file) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="call-class_method">
+  
+    + (<tt>Object</tt>) <strong>call</strong>(log_dir, gatk, index_fa, read_bam, read_vcf) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>INDEX is normal genom.fa</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mutations_caller_pipeline/gatk_caller.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_gatk'>gatk</span><span class='comma'>,</span> <span class='id identifier rubyid_index_fa'>index_fa</span><span class='comma'>,</span> <span class='id identifier rubyid_read_bam'>read_bam</span><span class='comma'>,</span> <span class='id identifier rubyid_read_vcf'>read_vcf</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>echo 'starting GATK for mutant at ' `date` &gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='rbrace'>}</span><span class='tstring_content'>
+    java -Xmx4g -jar  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gatk'>gatk</span><span class='rbrace'>}</span><span class='tstring_content'> -l INFO -R </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_fa'>index_fa</span><span class='rbrace'>}</span><span class='tstring_content'> -T UnifiedGenotyper \
+    -I </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_read_bam'>read_bam</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -o </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_read_vcf'>read_vcf</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    --genotype_likelihoods_model BOTH \
+    &gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='rbrace'>}</span><span class='tstring_content'> 2&gt;&amp;1 || exit 1</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span>
+  <span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prepare_realigne-class_method">
+  
+    + (<tt>Object</tt>) <strong>prepare_realigne</strong>(log_dir, gatk, read_bam, index_fa, target_intervals) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mutations_caller_pipeline/gatk_caller.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prepare_realigne'>prepare_realigne</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_gatk'>gatk</span><span class='comma'>,</span> <span class='id identifier rubyid_read_bam'>read_bam</span><span class='comma'>,</span> <span class='id identifier rubyid_index_fa'>index_fa</span><span class='comma'>,</span> <span class='id identifier rubyid_target_intervals'>target_intervals</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>java -Xmx2g -jar </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gatk'>gatk</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -I </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_read_bam'>read_bam</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -R </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_fa'>index_fa</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -T RealignerTargetCreator \
+    -o </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_intervals'>target_intervals</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span>
+  <span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="realigne-class_method">
+  
+    + (<tt>Object</tt>) <strong>realigne</strong>(log_dir, gatk, read_bam, index_fa, target_intervals, realigned_bam) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mutations_caller_pipeline/gatk_caller.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_realigne'>realigne</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_gatk'>gatk</span><span class='comma'>,</span> <span class='id identifier rubyid_read_bam'>read_bam</span><span class='comma'>,</span> <span class='id identifier rubyid_index_fa'>index_fa</span><span class='comma'>,</span> <span class='id identifier rubyid_target_intervals'>target_intervals</span><span class='comma'>,</span> <span class='id identifier rubyid_realigned_bam'>realigned_bam</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>java -Xmx4g -jar </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gatk'>gatk</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -I </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_read_bam'>read_bam</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -R </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_fa'>index_fa</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -T IndelRealigner \
+    -targetIntervals </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_intervals'>target_intervals</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -o </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_realigned_bam'>realigned_bam</span><span class='rbrace'>}</span><span class='tstring_content'> &gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='rbrace'>}</span><span class='tstring_content'> 2&gt;&amp;1 || exit 1</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span>
+  <span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="recalibrate_bam-class_method">
+  
+    + (<tt>Object</tt>) <strong>recalibrate_bam</strong>(log_dir, gatk, index_fa, index_vcf, read_bam, recal_file) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mutations_caller_pipeline/gatk_caller.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_recalibrate_bam'>recalibrate_bam</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span> <span class='comma'>,</span><span class='id identifier rubyid_gatk'>gatk</span><span class='comma'>,</span> <span class='id identifier rubyid_index_fa'>index_fa</span><span class='comma'>,</span> <span class='id identifier rubyid_index_vcf'>index_vcf</span><span class='comma'>,</span> <span class='id identifier rubyid_read_bam'>read_bam</span><span class='comma'>,</span> <span class='id identifier rubyid_recal_file'>recal_file</span> <span class='rparen'>)</span>
+  <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>echo 'starting GATK for mutant at ' `date` &gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='rbrace'>}</span><span class='tstring_content'>
+    java -Xmx4g -jar </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gatk'>gatk</span><span class='rbrace'>}</span><span class='tstring_content'> -knownSites </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_vcf'>index_vcf</span><span class='rbrace'>}</span><span class='tstring_content'> -I </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_read_bam'>read_bam</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -R </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_fa'>index_fa</span><span class='rbrace'>}</span><span class='tstring_content'> -T CountCovariates \
+    -cov ReadGroupCovariate -cov QualityScoreCovariate -cov DinucCovariate \
+    -cov CycleCovariate \
+    -recalFile </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_recal_file'>recal_file</span><span class='rbrace'>}</span><span class='tstring_content'> &gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='rbrace'>}</span><span class='tstring_content'> 2&gt;&amp;1 || exit 1 </span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span>
+  <span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="table_calibration-class_method">
+  
+    + (<tt>Object</tt>) <strong>table_calibration</strong>(log_dir, gatk, index_fa, read_bam, recal_bam, recal_file) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/mutations_caller_pipeline/gatk_caller.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_table_calibration'>table_calibration</span><span class='lparen'>(</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='comma'>,</span> <span class='id identifier rubyid_gatk'>gatk</span><span class='comma'>,</span> <span class='id identifier rubyid_index_fa'>index_fa</span><span class='comma'>,</span> <span class='id identifier rubyid_read_bam'>read_bam</span><span class='comma'>,</span> <span class='id identifier rubyid_recal_bam'>recal_bam</span><span class='comma'>,</span> <span class='id identifier rubyid_recal_file'>recal_file</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>java -Xmx4g -jar </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gatk'>gatk</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -R </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_index_fa'>index_fa</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -I </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_read_bam'>read_bam</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -T TableRecalibration \
+    -o </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_recal_bam'>recal_bam</span><span class='rbrace'>}</span><span class='tstring_content'> \
+    -recalFile </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_recal_file'>recal_file</span><span class='rbrace'>}</span><span class='tstring_content'> &gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_log_dir'>log_dir</span><span class='rbrace'>}</span><span class='tstring_content'> 2&gt;&amp;1 || exit 1</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span>
+  <span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Tue Jan 31 16:59:19 2012 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
