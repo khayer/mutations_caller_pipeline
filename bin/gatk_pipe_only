@@ -8,8 +8,7 @@ usage =<<EOF
 _________________________________________________________________________________________________
 
   #{$0}
-        -m mutant_r1.fq -n mutant_r2.fq
-        [-w wildtype_r1.fq -x wildtype_r2.fq]
+        -b sorted_bam_file
         -c config.yml -v raw_vcf_file
 _________________________________________________________________________________________________
 
@@ -30,10 +29,7 @@ ________________________________________________________________________________
 
 EOF
 
-options = { :mutant_r1 => nil,
-            :mutant_r2 => nil,
-            :wildtype_r1 => nil,
-            :wildtype_r2 => nil,
+options = { :bam_file_sorted => nil,
             :index_prefix => nil,
             :index_fa => nil,
             :index_vcf => nil,
@@ -47,20 +43,8 @@ options = { :mutant_r1 => nil,
 optparse = OptionParser.new do |opts|
   opts.banner = usage
 
-  opts.on("-m", "--fwd_read_mutant DIR", :REQUIRED, String, "Path to fwd read of mutant") do |i|
+  opts.on("-b", "--bam_file_sorted DIR", :REQUIRED, String, "Bam file sorted") do |i|
     options[:mutant_r1] = i
-  end
-
-  opts.on("-n", "--rev_read_mutant DIR", :REQUIRED, String, "Path to rev read of mutant") do |i|
-    options[:mutant_r2] = i
-  end
-
-  opts.on("-w", "--fwd_read_wildtype DIR", String, "Path to fwd read of wildtype, not mandatory") do |i|
-    options[:wildtype_r1] = i if i
-  end
-
-  opts.on("-x", "--rev_read_wildtype DIR", String, "Path to rev read of wildtype, not mandatory") do |i|
-    options[:wildtype_r2] = i if i
   end
 
   opts.on("-c", "--config DIR", String, "Set config file") do |path|
@@ -79,7 +63,7 @@ end
 
 begin
   optparse.parse!
-  mandatory = [:mutant_r1, :mutant_r2, :index_prefix, :annotation_file, :bwa, :samtools, :gatk, :vcf, :index_vcf, :index_fa]
+  mandatory = [:bam_file_sorted, :index_prefix, :annotation_file, :bwa, :samtools, :gatk, :vcf, :index_vcf, :index_fa]
   missing = mandatory.select{ |param| options[param].nil? }
   if !missing.empty?
     puts "\nMissing options given or missing in config_file: \n\t#{missing.join(",\n\t")}"
@@ -96,7 +80,7 @@ end
 
 # tmp files for output
 random = (rand*1000000).floor.to_s
-bam_file = "mutant_#{random}"
+bam_file = options[:bam_file_sorted]
 log_file = "#{random}.log"
 target_intervals = "#{random}_target.intervals"
 realigned_bam = "#{random}_realigned.bam"
@@ -104,6 +88,7 @@ recal_file = "#{random}_recal.csv"
 recal_bam = "#{random}_recal.bam"
 
 # BWA : First step mapping reads to reference
+=begin
 BwaCaller.call_paired_end(options[:mutant_r1],
                           options[:mutant_r2],
                           bam_file,
@@ -122,14 +107,15 @@ if options[:wildtype_r1] && options[:wildtype_r2]
                           options[:bwa],
                           options[:samtools])
 end
-
+=end
 # Indexing
-bam_file = bam_file + ".bam"
+#bam_file = bam_file + ".bam"
 SamtoolsIndexing.call(bam_file)
+=begin
 if bam_file_wildtype
   SamtoolsIndexing.call(bam_file_wildtype)
 end
-
+=end
 # Realigne
 GatkCaller.prepare_realigne(log_file, options[:gatk], bam_file , options[:index_fa], target_intervals)
 GatkCaller.realigne(log_file,options[:gatk], bam_file, options[:index_fa], target_intervals, realigned_bam)

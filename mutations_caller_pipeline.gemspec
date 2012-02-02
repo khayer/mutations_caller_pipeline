@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "mutations_caller_pipeline"
-  s.version     = "0.0.4"
+  s.version     = "0.0.6"
   s.date        = "2012-01-20"
   s.authors     = ["Kaharina Hayer"]
   s.email       = ["katharinaehayer@gmail.com"]
@@ -13,5 +13,6 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files -- {lib,bin}/*`.split("\n")
   #s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   << 'mutations_caller_pipeline'
+  s.executables   << 'gatk_pipe_only'
   #s.require_paths =  ["lib"]
 end
