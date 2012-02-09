@@ -4,7 +4,7 @@ require 'mutations_caller_pipeline/samtools_indexing'
 
 class MutationsCallerPipeline
   def self.hi
-    "Hello World!"
+    "Hello Test!"
   end
 end
 

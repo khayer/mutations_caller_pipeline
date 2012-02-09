@@ -44,7 +44,7 @@ optparse = OptionParser.new do |opts|
   opts.banner = usage
 
   opts.on("-b", "--bam_file_sorted DIR", :REQUIRED, String, "Bam file sorted") do |i|
-    options[:mutant_r1] = i
+    options[:bam_file_sorted] = i
   end
 
   opts.on("-c", "--config DIR", String, "Set config file") do |path|
