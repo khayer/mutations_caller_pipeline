@@ -1,0 +1,43 @@
+[bwa_aln] 17bp reads: max_diff = 2
+[bwa_aln] 38bp reads: max_diff = 3
+[bwa_aln] 64bp reads: max_diff = 4
+[bwa_aln] 93bp reads: max_diff = 5
+[bwa_aln] 124bp reads: max_diff = 6
+[bwa_aln] 157bp reads: max_diff = 7
+[bwa_aln] 190bp reads: max_diff = 8
+[bwa_aln] 225bp reads: max_diff = 9
+[bwa_aln] 17bp reads: max_diff = 2
+[bwa_aln] 38bp reads: max_diff = 3
+[bwa_aln] 64bp reads: max_diff = 4
+[bwa_aln] 93bp reads: max_diff = 5
+[bwa_aln] 124bp reads: max_diff = 6
+[bwa_aln] 157bp reads: max_diff = 7
+[bwa_aln] 190bp reads: max_diff = 8
+[bwa_aln] 225bp reads: max_diff = 9
+[bwa_seq_open] fail to open file 'r2'. Abort!
+[bwa_seq_open] fail to open file 'r1'. Abort!
+[bns_restore_core] fail to open file 'index.ann'. Abort!
+[samopen] no @SQ lines in the header.
+[sam_read1] missing header? Abort!
+starting GATK for mutant at  Wed Feb 15 11:18:48 EST 2012
+INFO  11:18:55,602 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  11:18:55,604 HelpFormatter - The Genome Analysis Toolkit (GATK) v1.3-19-g75d93e6, Compiled 2011/11/23 11:20:46 
+INFO  11:18:55,605 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  11:18:55,605 HelpFormatter - Please view our documentation at http://www.broadinstitute.org/gsa/wiki 
+INFO  11:18:55,605 HelpFormatter - For support, please view our support site at http://getsatisfaction.com/gsa 
+INFO  11:18:55,605 HelpFormatter - Program Args: -l INFO -R jsjs -T UnifiedGenotyper -I baba -o saa --genotype_likelihoods_model BOTH 
+INFO  11:18:55,606 HelpFormatter - Date/Time: 2012/02/15 11:18:55 
+INFO  11:18:55,606 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  11:18:55,606 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  11:18:56,709 GATKRunReport - Uploaded run statistics report to AWS S3 
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 1.3-19-g75d93e6): 
+##### ERROR The invalid arguments or inputs must be corrected before the GATK can proceed
+##### ERROR Please do not post this error to the GATK forum
+##### ERROR
+##### ERROR See the documentation (rerun with -h) for this tool to view allowable command-line arguments.
+##### ERROR Visit our wiki for extensive documentation http://www.broadinstitute.org/gsa/wiki
+##### ERROR Visit our forum to view answers to commonly asked questions http://getsatisfaction.com/gsa
+##### ERROR
+##### ERROR MESSAGE: Invalid command line: The GATK reads argument (-I, --input_file) supports only BAM files with the .bam extension and lists of BAM files with the .list extension, but the file baba has neither extension.  Please ensure that your BAM file or list of BAM files is in the correct format, update the extension, and try again.
+##### ERROR ------------------------------------------------------------------------------------------
